@@ -151,7 +151,7 @@ function renderSolution() {
             <span className="material-symbols-outlined text-primary" aria-hidden="true">
               work_history
             </span>
-            Work Experience
+            Recent Work Experience
           </h2>
 
           <div className="space-y-6">

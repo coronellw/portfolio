@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Wiston Coronell',
   title: 'Senior Front-End Engineer',
-  email: 'coronell@gmail.com',
+  email: 'coronell@proton.me',
   phone: '902-809-0967',
   location: 'Bedford, Nova Scotia, Canada',
   linkedin: 'https://linkedin.com/in/coronellw',

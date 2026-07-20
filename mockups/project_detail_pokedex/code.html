@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Details | DevPortfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .bento-item {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed": "#002114",
+                "inverse-surface": "#27313f",
+                "tertiary-fixed": "#ffdbcd",
+                "tertiary-fixed-dim": "#ffb596",
+                "surface-container-high": "#dee9fc",
+                "primary-container": "#2563eb",
+                "on-tertiary-fixed": "#360f00",
+                "surface": "#f8f9ff",
+                "inverse-on-surface": "#eaf1ff",
+                "on-surface-variant": "#434655",
+                "on-secondary-container": "#00714e",
+                "on-error-container": "#93000a",
+                "on-secondary": "#ffffff",
+                "tertiary": "#943700",
+                "secondary": "#006c4a",
+                "surface-container-highest": "#d9e3f6",
+                "primary-fixed-dim": "#b4c5ff",
+                "error-container": "#ffdad6",
+                "on-error": "#ffffff",
+                "error": "#ba1a1a",
+                "secondary-fixed-dim": "#68dba9",
+                "on-primary-container": "#eeefff",
+                "on-tertiary": "#ffffff",
+                "inverse-primary": "#b4c5ff",
+                "secondary-fixed": "#85f8c4",
+                "on-primary-fixed": "#00174b",
+                "surface-tint": "#0053db",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#003ea8",
+                "on-secondary-fixed-variant": "#005137",
+                "on-tertiary-fixed-variant": "#7d2d00",
+                "surface-container-low": "#eff4ff",
+                "on-background": "#121c2a",
+                "on-tertiary-container": "#ffede6",
+                "outline": "#737686",
+                "primary": "#004ac6",
+                "secondary-container": "#82f5c1",
+                "surface-container": "#e6eeff",
+                "surface-bright": "#f8f9ff",
+                "background": "#f8f9ff",
+                "on-primary": "#ffffff",
+                "outline-variant": "#c3c6d7",
+                "primary-fixed": "#dbe1ff",
+                "surface-variant": "#d9e3f6",
+                "tertiary-container": "#bc4800",
+                "surface-dim": "#d0dbed",
+                "on-surface": "#121c2a"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1200px",
+                "stack-xl": "64px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "stack-sm": "8px",
+                "stack-md": "16px",
+                "stack-lg": "32px"
+            },
+            "fontFamily": {
+                "headline-xl": ["Inter"],
+                "code-sm": ["Geist"],
+                "headline-xl-mobile": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Inter"],
+                "label-md": ["Geist"]
+            },
+            "fontSize": {
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "code-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-16">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">DevPortfolio</span>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<button class="bg-primary text-on-primary px-4 py-2 font-label-md rounded-lg active:opacity-80 transition-all">Resume</button>
+</nav>
+</div>
+</header>
+<main class="pt-24 pb-stack-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col gap-stack-lg">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<a class="hover:text-primary transition-colors" href="#">Projects</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Pokedex Extreme</span>
+</nav>
+<h1 class="font-headline-xl text-headline-xl text-on-surface max-w-3xl hidden md:block">Pokedex Extreme: High-Performance Entity Database</h1>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface md:hidden">Pokedex Extreme</h1>
+<!-- Hero Image -->
+<div class="w-full aspect-[21/9] rounded-xl overflow-hidden border border-outline-variant group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A hyper-realistic high-tech dashboard interface for a Pokedex application, featuring holographic 3D models of stylized monsters and complex data visualization charts. The lighting is clean and professional with a light-mode aesthetic using soft blues and crisp whites. The composition is cinematic, showcasing a sleek, minimalist software environment with intricate data nodes and interactive UI elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArM_R-cPUqXy_2nvSL4E-dtqD9C5Vs3semoqriDT0FD5qTFsh-MdCIYAyc6rKKKJtulgCgpl4MO1oJfvDJsqYyyL6DgB2hpZNdeUzX62RXkeZbjOJ3aFZpejmdtPghwq4gm3hB4hEro6YnYq48Z4XcHBg2x5SS3MP2yqLxbaLilXx6XCGpncMqJtaJLmUmxkF_1NBIiUDGyoPiueZcTP-ZflzjcCq5ryx3aB0kh55u-aEQNUkKpRS0gw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Content Grid (Bento Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project Overview & Tech Stack (Left) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Action Card -->
+<div class="p-stack-lg border border-outline-variant bg-surface-container-low rounded-xl flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Links</h3>
+<div class="flex flex-col gap-3">
+<a class="w-full bg-primary text-on-primary py-4 rounded-lg flex justify-center items-center gap-2 font-label-md hover:bg-primary-container transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+                                Live Demo
+                            </a>
+<a class="w-full border border-outline text-on-surface py-4 rounded-lg flex justify-center items-center gap-2 font-label-md hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+                                Source Code
+                            </a>
+</div>
+</div>
+<!-- Tech Stack Card -->
+<div class="p-stack-lg border border-outline-variant rounded-xl flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Tech Stack</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">Next.js 14</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">TypeScript</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">Tailwind CSS</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">TanStack Query</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">Framer Motion</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md">Redis</span>
+</div>
+</div>
+</div>
+<!-- Detailed Narrative (Right) -->
+<div class="md:col-span-8 flex flex-col gap-stack-lg">
+<div class="p-stack-lg md:p-stack-xl border border-outline-variant rounded-xl bg-surface-container-lowest">
+<article class="prose prose-slate max-w-none">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Project Summary</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg leading-relaxed">
+                                Pokedex Extreme was born from a need to handle large-scale API requests efficiently while providing a seamless, native-like mobile experience. The application indexes over 1,000 entities with real-time stats, evolutionary chains, and high-fidelity 3D assets.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter my-stack-lg">
+<div class="p-stack-md border-l-4 border-error bg-error-container/20 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-on-error-container uppercase tracking-wider mb-2">The Challenge</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Managing over 200 concurrent API calls during initial hydrate without causing significant layout shift or memory leaks on low-end devices.
+                                    </p>
+</div>
+<div class="p-stack-md border-l-4 border-secondary bg-secondary-container/20 rounded-r-lg">
+<h4 class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider mb-2">The Solution</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Implemented an ISR (Incremental Static Regeneration) strategy paired with a Redis-backed edge cache to reduce TTFB by 85%.
+                                    </p>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Core Features</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<strong class="block font-label-md text-on-surface">Infinite Scroll with Virtualization</strong>
+<span class="text-on-surface-variant">Optimized rendering using react-window to maintain 60fps even with thousands of list items.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<strong class="block font-label-md text-on-surface">Dynamic Theming</strong>
+<span class="text-on-surface-variant">Context-aware UI that adjusts primary color tokens based on the active entity's type properties.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<strong class="block font-label-md text-on-surface">Complex Filtering Logic</strong>
+<span class="text-on-surface-variant">Multi-threaded search algorithms to provide instantaneous results across types, stats, and abilities.</span>
+</div>
+</li>
+</ul>
+</article>
+</div>
+<!-- Visual Assets Gallery -->
+<div class="grid grid-cols-2 gap-gutter">
+<div class="aspect-square rounded-xl overflow-hidden border border-outline-variant bento-item">
+<img class="w-full h-full object-cover" data-alt="A close-up high-resolution screenshot of a mobile phone screen displaying a clean, modern UI for a monster's statistical attributes. The design uses soft gradients and elegant typography, following a light-mode aesthetic with primary blue accents. The lighting is soft and ambient, emphasizing professional mobile app design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu_G_oTefOYHqA_SMtGQ76y-IE6S7s0iM4YubgXth6Y4TGpdDe4THw-RormPGGiN7fWcd3Yd5DKx4gDk9Pam57gvcA6-7ZneTwEnC7Qulx_2DeL6hvpVNWSR590iJ3h9mQTELBmXHUU00wWFAsEQpuV0EeACFESNlwtmSe7PQ9eVp_m3xhA6ej5YTroU_kdWHuvzW3Y_gDn9G5rOu8SeUuxEdeJsLptCg679QPoLQSc3XofIjaBRxGhA"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden border border-outline-variant bento-item">
+<img class="w-full h-full object-cover" data-alt="A technical architectural diagram showing the data flow between a frontend client, an edge function, and a database. The visual style is minimalist and clean, using a professional color palette of navy, blue, and white. The lines are sharp and precise, reflecting an engineered aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw_9IRMOrVI4tKfOXw-LXrs0OdEdJ6eMPtANlnU4OYODtnqOjSSkiIw7Bhl29h8J5pBmw6hBNRh7mpWJ8j9yU2vuYLIuv5N-91FBU67gZJp4LiWEI1DTvp07PpQYU01ZSAJvz3_v5h5SA78_iJqbxtUzVh9vLnHuRAtfmf_7aoGHE-oQkWltB8I9gohzwgE-HF-K6zR6QM81JVmPlXYX7Tjwfd72PsNHQehqL0U4jujKJAPRwDltt22w"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- More Projects Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-stack-xl">
+<div class="border-t border-outline-variant pt-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg">Explore More Work</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Project Card 1 -->
+<div class="group border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-colors cursor-pointer bg-surface">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek minimalist dashboard for a finance application, featuring clean line graphs and dark blue UI elements on a pristine white background. The lighting is crisp and modern, emphasizing clarity and data-driven design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlZenFvGxU0aQWf96Fz0KMiAs5SWsSzjDst79jW53jEs0k_-QtT6Q5SF0rGteKPsEWMMIQnrxS2WpZKwyttpk4fqJeL_s6tUldJGkes1ffmnVQykVYx6S1Xy9wy6HCmIILWmHW0mynrSLmfkQtGaNQuKEXihh4OhQJK-nXHAtpHOiSCfM5ZaKS1BUe80cKma1v1_5X1SK5l6lndo5BDw2XEjaMSA_o2VaLjsSgBVJdJUwfYCKjM7pAiw"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">FinTrack SaaS</h4>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Real-time expense tracking with automated categorization and predictive budgeting.</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-colors cursor-pointer bg-surface">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An artistic representation of a code editor with glowing syntax highlighting on a clean, light-colored background. The scene is sophisticated and technical, using a palette of blues and greys to convey professional software development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChpMwB8qeW3YYLfh9HFhtTj7gMDwKDTaBI-t4SdpY--dkgd329_bCXlJksTDvwo5zab23pjc-Dz2VLD9wwmND5iaRS5Huw0ZNAzYMyso1hnOCSAUQ4kJfHMqkQmtO92OlI3uOwFd6g3h0AVXiuftZ-3o6GCQ3D29nOXX83L-zj1yjAAOXnoKvL0aZqKnObuvb6V7o6xJxDRD03A13YqIFKlP4ywwuKO6u3EobWHbNZwR9LsJ_vubBygg"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">DevBlog Engine</h4>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Headless CMS integration for developers with markdown-first editing and SEO optimization.</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-colors cursor-pointer bg-surface">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist smart home mobile interface with sleek icons and soft toggles. The lighting is airy and bright, featuring a sophisticated light-mode UI design with gentle shadow work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqLVkNdB2OLPPNIzAHZnJIpL1tETCpg1-dm_d35smyKqZyknkTUaALJIbuz0q437d3tNh2p526kamJmS_pbds8RDdx3Wv76RqrpeFxH-n2IuJUpwUfIDWe1X6HEliYJeRv4VkEKPNSpcQAIwwYzCnAcuX_B4lh-e4gpVkUDG-pkUW1_K5HXU9k60I8vc1mjAtvErVrPYTYlMB44g7cYrrf9DrEEDh8G3ZEtQMXvGLREE8DQ14JdRZCmg"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">EcoSmart Hub</h4>
+<p class="text-on-surface-variant font-body-md line-clamp-2">IoT control center for energy-efficient homes with detailed utility analytics.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-xl bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary font-bold">DevPortfolio</span>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 Built with Precision</p>
+</div>
+<div class="flex gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">GitHub</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant">
+<div class="flex justify-around items-center py-2 px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md-mobile text-label-md-mobile">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-md-mobile text-label-md-mobile">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-md-mobile text-label-md-mobile">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md-mobile text-label-md-mobile">About</span>
+</a>
+</div>
+</nav>
+<script>
+        // Micro-interaction for link hovering
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                // Potential for lightweight hover sound or subtle transform haptic
+            });
+        });
+        
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - DevPortfolio</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#002114",
+                      "inverse-surface": "#27313f",
+                      "tertiary-fixed": "#ffdbcd",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "surface-container-high": "#dee9fc",
+                      "primary-container": "#2563eb",
+                      "on-tertiary-fixed": "#360f00",
+                      "surface": "#f8f9ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface-variant": "#434655",
+                      "on-secondary-container": "#00714e",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#943700",
+                      "secondary": "#006c4a",
+                      "surface-container-highest": "#d9e3f6",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#68dba9",
+                      "on-primary-container": "#eeefff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#b4c5ff",
+                      "secondary-fixed": "#85f8c4",
+                      "on-primary-fixed": "#00174b",
+                      "surface-tint": "#0053db",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-secondary-fixed-variant": "#005137",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "surface-container-low": "#eff4ff",
+                      "on-background": "#121c2a",
+                      "on-tertiary-container": "#ffede6",
+                      "outline": "#737686",
+                      "primary": "#004ac6",
+                      "secondary-container": "#82f5c1",
+                      "surface-container": "#e6eeff",
+                      "surface-bright": "#f8f9ff",
+                      "background": "#f8f9ff",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c3c6d7",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-variant": "#d9e3f6",
+                      "tertiary-container": "#bc4800",
+                      "surface-dim": "#d0dbed",
+                      "on-surface": "#121c2a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1200px",
+                      "stack-xl": "64px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Inter"],
+                      "code-sm": ["Geist"],
+                      "headline-xl-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "label-md": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "code-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .geist-font { font-family: 'Geist', sans-serif; }
+        
+        /* Subtle Interactive States */
+        .ghost-border:hover {
+            box-shadow: 2px 2px 0px 0px #004ac6;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-16">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">DevPortfolio</span>
+</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Projects</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 cursor-pointer" href="#">Contact</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">About</a>
+<button class="ml-4 bg-primary text-on-primary px-stack-lg py-2 rounded-lg font-label-md text-label-md hover:opacity-90 active:opacity-80 transition-all">Resume</button>
+</nav>
+</div>
+</header>
+<main class="pt-24 pb-stack-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="mb-stack-xl text-center md:text-left">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-stack-md">Let's build something <span class="text-primary">extraordinary</span>.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Have a technical challenge or a project in mind? I'm available for freelance opportunities and engineering collaborations.</p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Contact Form Card -->
+<div class="md:col-span-7 bg-surface-container-lowest border border-outline-variant p-stack-lg md:p-stack-xl rounded-xl">
+<form class="flex flex-col gap-stack-lg" id="contactForm" onsubmit="return handleSubmit(event)">
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-md text-label-md text-on-surface-variant" for="name">Name</label>
+<input class="w-full bg-surface border border-outline-variant px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+<p class="text-error font-label-md text-sm hidden" id="nameError">Please enter your name.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email</label>
+<input class="w-full bg-surface border border-outline-variant px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+<p class="text-error font-label-md text-sm hidden" id="emailError">Please enter a valid email address.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-md text-label-md text-on-surface-variant" for="message">Message</label>
+<textarea class="w-full bg-surface border border-outline-variant px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-body-md resize-none" id="message" name="message" placeholder="Tell me about your project..." required="" rows="5"></textarea>
+<p class="text-error font-label-md text-sm hidden" id="messageError">Message cannot be empty.</p>
+</div>
+<button class="bg-primary text-on-primary py-4 px-stack-lg rounded-lg font-headline-md text-headline-md font-bold hover:opacity-95 active:scale-[0.98] transition-all flex justify-center items-center gap-stack-sm group" type="submit">
+                        Send Message
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="send">send</span>
+</button>
+<div class="hidden bg-secondary-container text-on-secondary-container p-4 rounded-lg flex items-center gap-3" id="successMessage">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="font-label-md">Thank you! Your message has been sent successfully.</span>
+</div>
+</form>
+</div>
+<!-- Info & Social Column -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<!-- Location Card (Bento Style) -->
+<div class="bg-surface-container border border-outline-variant rounded-xl overflow-hidden min-h-[300px] relative group">
+<div class="absolute top-4 left-4 z-10 bg-surface/90 backdrop-blur px-4 py-2 rounded-full border border-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md font-bold">San Francisco, CA</span>
+</div>
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A clean, minimalist 3D map visualization of a metropolitan city grid. The style is technical and architectural, featuring subtle blueprint lines and a sophisticated color palette of cool grays and soft blues. The lighting is diffused and professional, suggesting a high-end software development environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxwqx3TMVUGnDZLwNwoM_Xx3T4YjGNaS9BUgM0TJNzpVV8KDTHBaGaBfeUqqxWL8b5c0GGc97i-G55IhHhSOlnQPvocjcoPQsp4bWix4p48tN1LSO6hmjKW5u6zyPVxcAWrm_cy8yNcpX3-pvTO-z6jd3IGoIhdjPMwkoh6yLUvqFj2Fa80AX3krt05Re5zcjUYBX9CXpUX_EFlEOXVBVxn1swgqMlo0yDmlyBarBozP3CVfDZ3Yr_-A')">
+</div>
+</div>
+<!-- Connect Card -->
+<div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Digital Presence</h3>
+<div class="flex flex-col gap-stack-sm">
+<a aria-label="Follow me on GitHub" class="flex items-center justify-between p-4 bg-surface border border-outline-variant rounded-lg hover:border-primary transition-all group ghost-border" href="https://github.com" target="_blank">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+<span class="font-label-md text-label-md font-bold">GitHub</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</a>
+<a aria-label="Connect on LinkedIn" class="flex items-center justify-between p-4 bg-surface border border-outline-variant rounded-lg hover:border-primary transition-all group ghost-border" href="https://linkedin.com" target="_blank">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+<span class="font-label-md text-label-md font-bold">LinkedIn</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</a>
+<a aria-label="Follow on Twitter" class="flex items-center justify-between p-4 bg-surface border border-outline-variant rounded-lg hover:border-primary transition-all group ghost-border" href="https://twitter.com" target="_blank">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+<span class="font-label-md text-label-md font-bold">Twitter</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">Technical Skills &amp; Consulting</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-code-sm text-code-sm">Cloud Architecture</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-code-sm text-code-sm">Fullstack Dev</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-code-sm text-code-sm">DevOps</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant md:hidden">
+<div class="flex justify-around items-center py-2 px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label-md text-[10px]">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-label-md text-[10px]">Contact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-[10px]">About</span>
+</a>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-stack-xl bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">DevPortfolio</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 Built with Precision</p>
+<div class="flex gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">GitHub</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Reset errors
+            document.getElementById('nameError').classList.add('hidden');
+            document.getElementById('emailError').classList.add('hidden');
+            document.getElementById('messageError').classList.add('hidden');
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            let isValid = true;
+
+            if (!name) {
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!email || !email.includes('@')) {
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!message) {
+                document.getElementById('messageError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isValid) {
+                const btn = event.target.querySelector('button');
+                btn.disabled = true;
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="sync">sync</span> Sending...';
+                
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('hidden');
+                    event.target.reset();
+                    btn.disabled = false;
+                    btn.innerHTML = 'Send Message <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="send">send</span>';
+                }, 1500);
+            }
+            
+            return false;
+        }
+
+        // Active Nav Logic (Specific for Contact Screen)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Nav Active State
+            const mobileLinks = document.querySelectorAll('nav.md\\:hidden a');
+            mobileLinks.forEach(link => {
+                if(link.querySelector('span:last-child').innerText === 'Contact') {
+                    link.className = "flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold";
+                }
+            });
+        });
+    </script>
+</body></html>

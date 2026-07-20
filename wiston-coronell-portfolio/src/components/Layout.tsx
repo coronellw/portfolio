@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink, Outlet, type NavLinkRenderProps } from 'react-router-dom';
 import { personalInfo } from '../data/portfolio';
+import { useTheme } from '../context/ThemeContext';
 
 const navItems = [
   { to: '/', label: 'Home' },
@@ -10,6 +11,7 @@ const navItems = [
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   function closeMobileMenu() {
     setMobileMenuOpen(false);
@@ -69,6 +71,17 @@ export default function Layout() {
             >
               Resume
             </a>
+            {/* Theme toggle */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
           </nav>
 
           {/* Mobile hamburger button */}
@@ -124,6 +137,21 @@ export default function Layout() {
                 {item.label}
               </NavLink>
             ))}
+            {/* Theme toggle in mobile drawer */}
+            <button
+              type="button"
+              onClick={() => {
+                toggleTheme();
+                closeMobileMenu();
+              }}
+              className="flex items-center gap-3 px-4 py-3 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+              {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            </button>
             <hr className="my-4 border-outline-variant" />
             <a
               href={personalInfo.linkedin}

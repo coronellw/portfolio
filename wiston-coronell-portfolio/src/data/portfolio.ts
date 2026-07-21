@@ -202,7 +202,6 @@ export const projects: Project[] = [
     longDescription:
       'Built a feature-rich Pokédex that allows users to browse, search, and filter through all Pokémon generations. The app features detailed stat breakdowns, evolution chains, type charts, and a responsive grid layout optimized for both mobile and desktop viewing.',
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'PokéAPI', 'React Router'],
-    liveUrl: 'https://pokedex.example.com',
     repoUrl: 'https://github.com/coronellw/pokedex',
     icon: 'catching_pokemon',
     category: 'Front-End',
@@ -215,8 +214,7 @@ export const projects: Project[] = [
     longDescription:
       'Developed a full-featured movie discovery platform leveraging the TMDB API. Features include real-time search with debouncing, movie detail pages with cast and crew info, genre filtering, pagination, and the ability to create and manage personal watchlists using local storage.',
     techStack: ['React', 'TypeScript', 'TMDB API', 'Tailwind CSS', 'React Router', 'Jotai'],
-    liveUrl: 'https://tmdb-explorer.example.com',
-    repoUrl: 'https://github.com/coronellw/tmdb-explorer',
+    repoUrl: 'https://github.com/coronellw/tmdb',
     icon: 'movie',
     category: 'Front-End',
   },
@@ -228,8 +226,7 @@ export const projects: Project[] = [
     longDescription:
       'Created a full-featured Kanban-style project management tool with drag-and-drop functionality using dnd-kit. Supports multiple boards, task creation with rich descriptions, labels, assignees, due dates, and status transitions. Features local persistence and an intuitive, accessible interface.',
     techStack: ['React', 'TypeScript', 'dnd-kit', 'Tailwind CSS', 'Zustand', 'React Router'],
-    liveUrl: 'https://kanban.example.com',
-    repoUrl: 'https://github.com/coronellw/kanban-board',
+    liveUrl: 'https://coronellw.github.io/kanban-project/home',
     icon: 'view_kanban',
     category: 'Full Stack',
   },

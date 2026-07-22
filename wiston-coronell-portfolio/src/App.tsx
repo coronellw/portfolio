@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ export default function App() {
                   The page you're looking for doesn't exist.
                 </p>
                 <a
-                  href="/"
+                  href="/portfolio/"
                   className="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md inline-flex items-center gap-2 hover:opacity-90 transition-all"
                 >
                   Back to Home

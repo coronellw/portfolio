@@ -60,8 +60,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Code Card Decorator */}
+          {/* Code Card Decorator with Abstract Shapes */}
           <div className="md:col-span-5 relative hidden md:block">
+            {/* Abstract geometric shapes */}
+            <div className="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-primary/10 dark:bg-primary/15 blur-xl animate-pulse" aria-hidden="true" />
+            <div className="absolute top-12 -right-6 w-16 h-16 border-2 border-primary/20 dark:border-primary/30 rounded-lg rotate-45" aria-hidden="true" />
+            <div className="absolute bottom-16 -left-4 w-12 h-12 border-2 border-secondary-container/30 dark:border-secondary-container/40 rounded-full" aria-hidden="true" />
+            <div className="absolute -bottom-6 right-12 w-20 h-20 bg-gradient-to-br from-primary/5 to-secondary-container/10 dark:from-primary/10 dark:to-secondary-container/15 rounded-2xl -rotate-12 blur-sm" aria-hidden="true" />
+            <div className="absolute top-1/2 -translate-y-1/2 -right-8 w-32 h-32 border border-outline-variant/30 dark:border-outline-variant/20 rounded-full" aria-hidden="true" />
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-40 h-0.5 bg-gradient-to-r from-transparent via-primary/20 dark:via-primary/30 to-transparent" aria-hidden="true" />
+
             <div className="glass-card rounded-xl p-6 border border-outline-variant relative z-10 transform hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center gap-2 mb-4 border-b border-outline-variant pb-4">
                 <div className="w-3 h-3 rounded-full bg-error" />
